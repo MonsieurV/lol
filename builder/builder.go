@@ -31,21 +31,23 @@ func (files *Files) String() string {
 // Parameters contains all context variables.
 // In the CLI this variables are set by viper.
 type Parameters struct {
-	Log       log.Logger
-	Service   string
-	Compiler  string
-	Force     bool
-	Biblio    string
-	Output    string
-	Main      string
-	PipedMain bool
-	Patterns  []string
+	Log        log.Logger
+	Service    string
+	ServiceUrl string
+	Compiler   string
+	Force      bool
+	Biblio     string
+	Output     string
+	Main       string
+	PipedMain  bool
+	Patterns   []string
 }
 
 // String provides the Stringer interface for Parameters.
 func (p *Parameters) String() string {
 	w := new(strings.Builder)
 	fmt.Fprintln(w, "Service:  ", p.Service)
+	fmt.Fprintln(w, "ServiceUrl:  ", p.ServiceUrl)
 	fmt.Fprintln(w, "Compiler: ", p.Compiler)
 	if p.Force {
 		fmt.Fprintln(w, "Force:    ", p.Force)

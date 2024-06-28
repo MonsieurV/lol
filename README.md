@@ -22,6 +22,7 @@ LaTeX online compiler. More info at www.github.com/kpym/lol.
 
 Available options:
   -s, --service string    Service can be laton or ytotex.
+  --serviceUrl string    Configure the server base URL for the service.
   -c, --compiler string   One of pdflatex,xelatex or lualatex.
                           For ytotex platex, uplatex and context are also available.
                            (default "pdflatex")
